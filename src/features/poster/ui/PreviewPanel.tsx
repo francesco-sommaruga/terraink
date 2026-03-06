@@ -308,7 +308,6 @@ export default function PreviewPanel() {
             fontFamily={form.fontFamily}
             textColor={effectiveTheme.ui.text}
             showPosterText={form.showPosterText}
-            includeCredits={form.includeCredits}
           />
         </div>
       </div>

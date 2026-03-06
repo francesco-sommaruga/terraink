@@ -24,7 +24,6 @@ export function compositeExport(
     displayCountry,
     fontFamily,
     showPosterText = true,
-    includeCredits = true,
   } = options;
 
   const width = mapCanvas.width;
@@ -54,7 +53,6 @@ export function compositeExport(
     displayCountry,
     fontFamily,
     showPosterText,
-    includeCredits,
   );
 
   const size: CanvasSize = {
