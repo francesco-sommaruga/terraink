@@ -168,13 +168,6 @@ export function useFormHandlers() {
     [dispatch],
   );
 
-  const handleCreditsChange = useCallback(
-    (value: boolean) => {
-      dispatch({ type: "SET_FIELD", name: "includeCredits", value });
-    },
-    [dispatch],
-  );
-
   return {
     handleChange,
     handleNumericFieldBlur,
@@ -185,6 +178,5 @@ export function useFormHandlers() {
     handleLocationSelect,
     handleClearLocation,
     setLocationFocused,
-    handleCreditsChange,
   };
 }

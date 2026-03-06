@@ -1,5 +1,4 @@
 import { formatCoordinates } from "@/shared/geo/posterBounds";
-import { APP_CREDIT_URL } from "@/core/config";
 import {
   TEXT_DIMENSION_REFERENCE_PX,
   TEXT_CITY_Y_RATIO,
@@ -24,7 +23,6 @@ interface PosterTextOverlayProps {
   fontFamily: string;
   textColor: string;
   showPosterText: boolean;
-  includeCredits: boolean;
 }
 
 /**
@@ -40,7 +38,6 @@ export default function PosterTextOverlay({
   fontFamily,
   textColor,
   showPosterText,
-  includeCredits,
 }: PosterTextOverlayProps) {
   const toCqMin = (px: number) => (px / TEXT_DIMENSION_REFERENCE_PX) * 100;
 
@@ -120,20 +117,6 @@ export default function PosterTextOverlay({
       >
         &copy; OpenStreetMap contributors
       </span>
-
-      {includeCredits && (
-        <span
-          className="poster-credits"
-          style={{
-            fontFamily: bodyFont,
-            fontSize: attributionFontSize,
-            bottom: `${TEXT_EDGE_MARGIN_RATIO * 100}%`,
-            left: `${TEXT_EDGE_MARGIN_RATIO * 100}%`,
-          }}
-        >
-          created with {APP_CREDIT_URL}
-        </span>
-      )}
     </div>
   );
 }

@@ -19,7 +19,6 @@ export interface ExportOptions {
   displayContinent?: string;
   fontFamily: string;
   showPosterText: boolean;
-  includeCredits?: boolean;
 }
 
 export interface Typography {
@@ -28,5 +27,4 @@ export interface Typography {
   displayContinent?: string;
   fontFamily: string;
   showPosterText: boolean;
-  includeCredits?: boolean;
 }

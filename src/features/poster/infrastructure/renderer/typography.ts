@@ -1,6 +1,5 @@
 import { formatCoordinates } from "@/shared/geo/posterBounds";
 import type { Coordinate } from "@/shared/geo/types";
-import { APP_CREDIT_URL } from "@/core/config";
 import {
   TEXT_DIMENSION_REFERENCE_PX,
   TEXT_CITY_Y_RATIO,
@@ -28,7 +27,6 @@ export function drawPosterText(
   country: string,
   fontFamily: string | undefined,
   showPosterText: boolean,
-  includeCredits: boolean = true,
 ): void {
   const textColor = theme.ui?.text || "#111111";
   const titleFontFamily = fontFamily
@@ -99,18 +97,4 @@ export function drawPosterText(
     height * (1 - TEXT_EDGE_MARGIN_RATIO),
   );
   ctx.globalAlpha = 1;
-
-  if (includeCredits) {
-    ctx.fillStyle = textColor;
-    ctx.globalAlpha = 0.55;
-    ctx.textAlign = "left";
-    ctx.textBaseline = "bottom";
-    ctx.font = `300 ${attributionFontSize}px ${bodyFontFamily}`;
-    ctx.fillText(
-      `created with ${APP_CREDIT_URL}`,
-      width * TEXT_EDGE_MARGIN_RATIO,
-      height * (1 - TEXT_EDGE_MARGIN_RATIO),
-    );
-    ctx.globalAlpha = 1;
-  }
 }

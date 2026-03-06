@@ -26,7 +26,6 @@ export default function SettingsPanel() {
     handleLocationSelect,
     handleClearLocation,
     setLocationFocused,
-    handleCreditsChange,
   } = useFormHandlers();
   const { handleDownloadPng, handleDownloadPdf } = useExport();
   const { locationSuggestions, isLocationSearching } = useLocationAutocomplete(
@@ -89,7 +88,6 @@ export default function SettingsPanel() {
           form={state.form}
           onChange={handleChange}
           fontOptions={FONT_OPTIONS}
-          onCreditsChange={handleCreditsChange}
         />
       )}
 

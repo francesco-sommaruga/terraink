@@ -72,7 +72,6 @@ export function useExport() {
           displayCountry: form.displayCountry || "",
           fontFamily: form.fontFamily.trim(),
           showPosterText: form.showPosterText,
-          includeCredits: form.includeCredits,
         });
 
         // 3. Download
